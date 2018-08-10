@@ -1,4 +1,5 @@
 <div *ngFor="let coffee of coffeeList">
   {{coffee.id}}: {{coffee.source}} : {{coffee.tastesGood}}
+  <button (click)="deleteCoffee(coffee.id)">X</button>
   <br>
 </div>

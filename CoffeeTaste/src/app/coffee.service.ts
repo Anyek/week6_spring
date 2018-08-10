@@ -18,6 +18,9 @@ export class CoffeeService {
   addCoffee(coffee: Coffee) {
     this.http.post(this.url, coffee).subscribe();
   }
+  removeCoffee(id: number) {
+    this.http.delete(this.url + "/" + id).subscribe();
+  }
 
   constructor(private http: HttpClient) {}
 }

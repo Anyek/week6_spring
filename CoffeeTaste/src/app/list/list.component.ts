@@ -13,6 +13,9 @@ export class ListComponent implements OnInit {
   getCoffee(): void {
     this.coffeeService.getCoffee().subscribe(data => (this.coffeeList = data));
   }
+  deleteCoffee(id: number) {
+    this.coffeeService.removeCoffee(id);
+  }
 
   constructor(private coffeeService: CoffeeService) {}
 
