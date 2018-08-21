@@ -7,7 +7,7 @@ import { HttpClient } from "../../node_modules/@angular/common/http";
   providedIn: "root"
 })
 export class JobServiceService {
-  url: string = "http://localhost:8080/job";
+  url: string = "http://localhost:8080/jobs";
 
   jobList: Job[] = [];
 

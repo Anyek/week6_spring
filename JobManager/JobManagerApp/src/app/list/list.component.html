@@ -1,3 +1,33 @@
-<p>
-  Job Board List
-</p>
+<!-- Search available jobs
+<input placeholder="cleaning, auto, etc." type="text" [(ngModel)]="job.type">
+<br>
+<button (click)="getJob()">Search</button> -->
+
+
+<div *ngFor="let job of jobList">
+  {{job.id}}: {{job.type}} : {{job.description}} : {{job.price}}
+  <button (click)="deleteJob(job.id)">X</button>
+  <br>
+</div>
+
+<!-- <form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input id="price" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" class="form-control">
+      <option value=""></option>
+      <option *ngFor="" value=""></option>
+    </select>
+  </div>
+
+  <button class="btn btm-primary">Save</button>
+
+
+</form> -->
